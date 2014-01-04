@@ -13,7 +13,7 @@ public class SetDMXValues extends Activity {
     private SeekBar sbRed;
     private SeekBar sbGreen;
     private SeekBar sbBlue;
-    private SeekBar sbDIMMER;
+    private SeekBar sbDimmer;
     private Button btnConnect;
     private Button btnDisconnect;
     /**
@@ -23,5 +23,16 @@ public class SetDMXValues extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        InitializeApp();
+    }
+
+    private void InitializeApp() {
+        sbRed = (SeekBar) findViewById(R.id.sbRed);
+        sbGreen = (SeekBar) findViewById(R.id.sbGreen);
+        sbBlue = (SeekBar) findViewById(R.id.sbBlue);
+        sbDimmer = (SeekBar) findViewById(R.id.sbDimmer);
+        btnConnect = (Button) findViewById(R.id.btnConnect);
+        btnDisconnect = (Button) findViewById(R.id.btnDisconnect);
     }
 }

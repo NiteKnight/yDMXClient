@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2014. by Michael "NiteKnight" Scheidl. Baden/AUSTRIA
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="10dp">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/sliderRED"
+            android:id="@+id/textView"/>
+    <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbRed" android:layout_gravity="center_horizontal" android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/sliderGREEN"
+            android:id="@+id/textView2" android:paddingTop="10dp"/>
+    <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbGreen" android:paddingTop="10dp" android:paddingBottom="10dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/sliderBLUE"
+            android:id="@+id/textView3" android:paddingTop="10dp"/>
+    <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbBlue" android:paddingTop="10dp" android:paddingBottom="10dp"/>
+    <View android:layout_width="fill_parent"
+          android:layout_height="5dp"
+          android:background="#813aff" android:layout_marginLeft="60dp" android:layout_marginRight="60dp"
+          android:layout_marginTop="30dp" android:layout_marginBottom="30dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/sliderDIMMER"
+            android:id="@+id/textView4"/>
+    <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sbDimmer" android:paddingTop="10dp" android:paddingBottom="10dp"/>
+    <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:rowCount="1" android:columnCount="2"
+            >
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnCONNECT"
+                android:id="@+id/btnConnect" android:layout_gravity="center|fill_horizontal" android:layout_row="0"
+                android:enabled="true" android:layout_column="0"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnDISCONNECT"
+                android:id="@+id/btnDisconnect" android:layout_gravity="center|fill_horizontal"
+                android:layout_column="1" android:layout_row="0"/>
+    </GridLayout>
+</LinearLayout>
+

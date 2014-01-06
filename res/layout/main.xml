@@ -13,61 +13,81 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/sliderRED"
-            android:id="@+id/textView"/>
+            android:id="@+id/lblRed"/>
     <SeekBar
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/sbRed" android:layout_gravity="center_horizontal" android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>
+            android:paddingBottom="10dp" android:max="255"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/sliderGREEN"
-            android:id="@+id/textView2" android:paddingTop="10dp"/>
+            android:id="@+id/lblGreen" android:paddingTop="10dp"/>
     <SeekBar
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/sbGreen" android:paddingTop="10dp" android:paddingBottom="10dp"/>
+            android:id="@+id/sbGreen" android:paddingTop="10dp" android:paddingBottom="10dp" android:max="255"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/sliderBLUE"
-            android:id="@+id/textView3" android:paddingTop="10dp"/>
+            android:id="@+id/lblBlue" android:paddingTop="10dp"/>
     <SeekBar
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/sbBlue" android:paddingTop="10dp" android:paddingBottom="10dp"/>
+            android:id="@+id/sbBlue" android:paddingTop="10dp" android:paddingBottom="10dp" android:max="255"/>
     <View android:layout_width="fill_parent"
-          android:layout_height="5dp"
+          android:layout_height="25dp"
           android:background="#813aff" android:layout_marginLeft="60dp" android:layout_marginRight="60dp"
-          android:layout_marginTop="30dp" android:layout_marginBottom="30dp"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/sliderDIMMER"
-            android:id="@+id/textView4"/>
-    <SeekBar
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/sbDimmer" android:paddingTop="10dp" android:paddingBottom="10dp"/>
+          android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:id="@+id/cvCurrentColor"/>
+    <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center_horizontal|left|right"
+            android:alignmentMode="alignBounds" android:measureWithLargestChild="false"
+            android:orientation="horizontal" android:rowCount="2" android:columnCount="2">
+        <ToggleButton
+                android:layout_width="150dp"
+                android:layout_height="fill_parent"
+                android:text="@string/btnBLACKOUT"
+                android:id="@+id/btnBlackOut" android:layout_column="1"
+                android:layout_gravity="center_horizontal|bottom|top" android:clickable="true"
+                android:checked="false" android:enabled="true" android:textOff="B/O" android:textOn="B/O"
+                android:layout_row="0"
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/sliderDIMMER"
+                android:id="@+id/lblDimmer" android:layout_column="0"
+                android:layout_gravity="fill_horizontal" android:layout_row="0"/>
+        <SeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sbDimmer" android:paddingTop="10dp" android:paddingBottom="10dp" android:max="255"
+                android:indeterminate="false" android:layout_row="1" android:layout_gravity="fill_horizontal|center_horizontal|left|right"
+                android:layout_column="0" android:layout_columnSpan="2"/>
+    </GridLayout>
     <GridLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent" android:rowCount="1" android:columnCount="2"
-            >
+            android:layout_height="fill_parent"
+            android:rowCount="1" android:columnCount="2" android:alignmentMode="alignBounds"
+            android:useDefaultMargins="true">
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btnCONNECT"
-                android:id="@+id/btnConnect" android:layout_gravity="center|fill_horizontal" android:layout_row="0"
-                android:enabled="true" android:layout_column="0"/>
+                android:id="@+id/btnConnect" android:layout_gravity="bottom|left"
+                android:enabled="true" android:layout_column="0" android:layout_row="0"
+                />
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/btnDISCONNECT"
-                android:id="@+id/btnDisconnect" android:layout_gravity="center|fill_horizontal"
+                android:id="@+id/btnDisconnect" android:layout_gravity="bottom|right"
                 android:layout_column="1" android:layout_row="0"/>
     </GridLayout>
 </LinearLayout>

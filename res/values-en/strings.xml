@@ -10,4 +10,6 @@
     <string name="sliderDIMMER">DIMMER</string>
     <string name="btnCONNECT">Connect</string>
     <string name="btnDISCONNECT">Disconnect</string>
+    <string name="RedLabel">Red</string>
+    <string name="btnBLACKOUT">B/O</string>
 </resources>
